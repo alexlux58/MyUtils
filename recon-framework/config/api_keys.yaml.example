@@ -1,0 +1,30 @@
+# API Keys Configuration
+# Copy this file to api_keys.yaml and add your actual API keys
+
+# Shodan API Key
+# Get from: https://account.shodan.io/
+shodan: "your_shodan_api_key_here"
+
+# VirusTotal API Key
+# Get from: https://www.virustotal.com/gui/my-apikey
+virustotal: "your_virustotal_api_key_here"
+
+# Have I Been Pwned API Key
+# Get from: https://haveibeenpwned.com/API/Key
+hibp: "your_hibp_api_key_here"
+
+# GitHub Personal Access Token
+# Get from: https://github.com/settings/tokens
+github: "your_github_token_here"
+
+# SecurityTrails API Key
+# Get from: https://securitytrails.com/corp/api
+securitytrails: "your_securitytrails_api_key_here"
+
+# Censys API Credentials
+# Format: "your_censys_id:your_censys_secret"
+# Get from: https://censys.io/account/api
+censys: "your_censys_id:your_censys_secret_here"
+
+# Additional API Keys (add as needed)
+# custom_api: "your_custom_api_key_here"

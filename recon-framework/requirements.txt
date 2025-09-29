@@ -1,0 +1,52 @@
+# Core Framework Dependencies
+requests>=2.31.0,<3.0.0
+aiohttp>=3.8.0,<4.0.0
+asyncio-throttle>=1.0.2,<2.0.0
+python-dotenv>=1.0.0,<2.0.0
+pyyaml>=6.0,<7.0
+cryptography>=41.0.0,<42.0.0
+
+# Data Processing & Analysis
+pandas>=2.0.0,<3.0.0
+numpy>=1.24.0,<2.0.0
+beautifulsoup4>=4.12.0,<5.0.0
+lxml>=4.9.0,<5.0.0
+
+# Database & Storage
+sqlite3
+sqlalchemy>=2.0.0,<3.0.0
+google-api-python-client>=2.0.0,<3.0.0
+google-auth>=2.0.0,<3.0.0
+google-auth-oauthlib>=1.0.0,<2.0.0
+
+# Security & Cryptography
+hashlib
+secrets
+keyring>=24.0.0,<25.0.0
+bcrypt>=4.0.0,<5.0.0
+
+# Network & DNS
+dnspython>=2.3.0,<3.0.0
+python-whois>=0.8.0,<1.0.0
+ipaddress
+socket
+
+# Web Scraping & Automation
+selenium>=4.15.0,<5.0.0
+webdriver-manager>=4.0.0,<5.0.0
+fake-useragent>=1.4.0,<2.0.0
+
+# Logging & Monitoring
+structlog>=23.0.0,<24.0.0
+colorama>=0.4.6,<1.0.0
+tqdm>=4.65.0,<5.0.0
+
+# Testing
+pytest>=7.4.0,<8.0.0
+pytest-asyncio>=0.21.0,<1.0.0
+pytest-mock>=3.11.0,<4.0.0
+
+# Additional Security Tools
+shodan>=1.29.0,<2.0.0
+censys>=2.2.0,<3.0.0
+virustotal-api>=1.1.11,<2.0.0

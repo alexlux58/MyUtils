@@ -1,0 +1,25 @@
+# Rate Limits Configuration
+# Defines rate limits for different services and operations
+
+# Default rate limit (requests per second)
+default: 1.0
+
+# Service-specific rate limits
+whois: 0.5          # WHOIS lookups - conservative rate
+dns: 2.0            # DNS queries - moderate rate
+http: 5.0           # HTTP requests - higher rate
+api: 1.0            # General API calls
+
+# Third-party API rate limits
+shodan: 1.0         # Shodan API - 1 request per second
+virustotal: 4.0     # VirusTotal API - 4 requests per minute (0.067 req/s)
+hibp: 1.5           # Have I Been Pwned API - 1.5 requests per second
+github: 1.0         # GitHub API - 1 request per second
+securitytrails: 1.0 # SecurityTrails API - 1 request per second
+censys: 0.5         # Censys API - 0.5 requests per second
+
+# Rate limiting behavior
+jitter_factor: 0.1      # 10% jitter to avoid thundering herd
+backoff_multiplier: 2.0 # Exponential backoff multiplier
+max_backoff: 300        # Maximum backoff time in seconds
+window_duration: 60     # Rate limiting window in seconds

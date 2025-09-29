@@ -1,0 +1,53 @@
+# Integration Configuration
+# Configure external tool integrations
+
+# HexStrike AI Integration
+hexstrike:
+  enabled: false  # Set to true to enable HexStrike integration
+  server_url: "http://localhost:8888"  # HexStrike MCP server URL
+  api_key: ""  # API key for HexStrike authentication
+  timeout: 30  # Request timeout in seconds
+  retry_attempts: 3  # Number of retry attempts
+  auto_sync: true  # Automatically sync results back to framework
+  workflow_creation: true  # Enable automatic workflow creation
+
+# Other Security Tool Integrations
+other_tools:
+  # Metasploit Integration
+  metasploit:
+    enabled: false
+    server_url: "http://localhost:55553"
+    api_key: ""
+    timeout: 60
+  
+  # Burp Suite Integration
+  burp_suite:
+    enabled: false
+    server_url: "http://localhost:8080"
+    api_key: ""
+    timeout: 30
+  
+  # OWASP ZAP Integration
+  zap:
+    enabled: false
+    server_url: "http://localhost:8080"
+    api_key: ""
+    timeout: 30
+
+# Integration Settings
+settings:
+  # Data synchronization
+  sync_interval: 300  # Sync interval in seconds
+  max_sync_retries: 3  # Maximum sync retry attempts
+  
+  # Workflow management
+  auto_create_workflows: true  # Automatically create workflows
+  workflow_retention_days: 30  # How long to keep workflows
+  
+  # Error handling
+  fail_gracefully: true  # Continue operation if integration fails
+  log_integration_errors: true  # Log integration errors
+  
+  # Security
+  encrypt_sync_data: true  # Encrypt data during sync
+  validate_ssl: true  # Validate SSL certificates

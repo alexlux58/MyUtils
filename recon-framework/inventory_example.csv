@@ -1,0 +1,11 @@
+inventory_id,input_value,input_type,notes,sensitivity_level,authorized_scan
+1,example.com,domain,Test domain for reconnaissance,public,true
+2,192.168.1.1,ip,Test IP address,low,true
+3,admin@example.com,email,Test email address,med,true
+4,testuser,username,Test username,low,true
+5,subdomain.example.com,subdomain,Test subdomain,med,false
+6,10.0.0.1,ip,Private IP address,high,false
+7,government.gov,domain,Government domain,high,false
+8,user@company.com,email,Company email,med,true
+9,api.example.com,subdomain,API subdomain,low,true
+10,203.0.113.1,ip,Public IP address,low,true

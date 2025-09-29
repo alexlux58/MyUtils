@@ -1,0 +1,82 @@
+# Output Settings Configuration
+# Defines output formats and settings
+
+# Google Sheets Integration
+google_sheets:
+  enabled: false                    # Set to true to enable Google Sheets output
+  spreadsheet_id: null             # Google Sheets ID (will be created if null)
+  credentials_file: "credentials.json"  # Google API credentials file
+  token_file: "token.json"         # OAuth token file
+  sheet_name: "Reconnaissance Results"  # Name of the sheet
+  include_raw_data: true           # Include raw JSON data in sheets
+
+# JSONL Output
+jsonl:
+  enabled: true                     # Enable JSONL output
+  include_raw_data: true           # Include raw data in JSONL
+  compress: false                  # Compress output files
+  flatten_structure: true          # Flatten nested structures
+  include_metadata: true           # Include metadata in each record
+
+# SQLite Database Output
+sqlite:
+  enabled: true                     # Enable SQLite output
+  create_views: true               # Create analysis views
+  index_tables: true               # Create indexes for performance
+  foreign_keys: true               # Enable foreign key constraints
+  wal_mode: true                   # Use WAL mode for better concurrency
+
+# Report Generation
+reports:
+  generate_summary: true           # Generate executive summary
+  include_charts: true             # Include charts and visualizations
+  export_formats:                  # Export formats for reports
+    - "pdf"
+    - "html"
+    - "json"
+  chart_types:                     # Types of charts to generate
+    - "risk_heatmap"
+    - "vulnerability_distribution"
+    - "attack_vector_timeline"
+    - "geographic_distribution"
+
+# File Output Settings
+file_output:
+  base_directory: "./results"      # Base directory for output files
+  create_timestamp_dirs: true      # Create timestamped subdirectories
+  preserve_intermediate: true      # Keep intermediate results
+  cleanup_after_days: 30          # Clean up old files after N days
+
+# Data Export Settings
+data_export:
+  include_sensitive_data: false    # Include sensitive data in exports
+  mask_credentials: true           # Mask API keys and credentials
+  anonymize_targets: false         # Anonymize target information
+  export_frequency: "on_completion" # When to export data
+
+# Notification Settings
+notifications:
+  enabled: false                   # Enable notifications
+  email:                          # Email notifications
+    enabled: false
+    smtp_server: "smtp.gmail.com"
+    smtp_port: 587
+    username: ""
+    password: ""
+    to_addresses: []
+  webhook:                        # Webhook notifications
+    enabled: false
+    url: ""
+    secret: ""
+  slack:                          # Slack notifications
+    enabled: false
+    webhook_url: ""
+    channel: "#security"
+
+# Security Settings
+security:
+  encrypt_output: false            # Encrypt output files
+  encryption_key_file: ".encryption_key"  # File containing encryption key
+  require_authentication: false    # Require authentication for access
+  session_timeout: 3600           # Session timeout in seconds
+  max_concurrent_scans: 5         # Maximum concurrent scans
